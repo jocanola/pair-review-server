@@ -27,15 +27,7 @@ mongoose.connect(
     console.log("Databaee connected");
   }
 );
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-    methods: "GET,PUT,POST,OPTIONS",
-    allowedHeaders: "Content-Type,Authorization",
-  })
-);
-
+//cors error
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
