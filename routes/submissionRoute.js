@@ -51,10 +51,10 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.put("/review/:subId", async (req, res) => {
+router.put("/review/:id", async (req, res) => {
   try {
     //get submission id
-    const _id = await req.params.subId;
+    const _id = await req.params.id;
     //use submission id to fetch submission from db
     const sub = await submissions.findById(_id);
     //if the sub with the id is found update
