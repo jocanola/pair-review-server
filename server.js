@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
+const errorHandler = require('./middlewares/error')
 const studentSubmissions = require("./routes/submissionRoute");
 const app = express();
 //Middleware
@@ -38,6 +39,7 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(errorHandler);
 app.get("/", (req, res) => {
   res.status(200).send("starting schoolhouse server");
 });
