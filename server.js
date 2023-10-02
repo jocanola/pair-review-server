@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
-const errorHandler = require('./middlewares/error')
+const errorHandler = require('./middlewares/errors')
 const studentSubmissions = require("./routes/submissionRoute");
 const app = express();
 //Middleware

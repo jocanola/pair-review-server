@@ -5,10 +5,12 @@ const {submitAss,
   reviewSubmission} = require("../controllers/submissionController")
 const router = express.Router();
 
-router.post("/", submitAss);
+router.post("/", function(req, res){
+  submitAss(req, res)
+} );
 
-router.get("/:id", getSubsWithId);
+router.get("/:id", function(req, res){ getSubsWithId(req, res)});
 
-router.put("/review/:id", reviewSubmission);
+router.put("/review/:id",  function(req, res){ reviewSubmission(req, res)});
 
 module.exports = router;

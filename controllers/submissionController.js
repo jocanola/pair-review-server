@@ -75,5 +75,5 @@ const submitAss = async (req, res) => {
 module.export = {
     submitAss,
     getSubsWithId,
-    reviewSubmissio
+    reviewSubmission
 }
